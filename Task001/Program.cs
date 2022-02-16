@@ -12,3 +12,16 @@ int CountForNewArray(string[] ArrayForCounting)
     }
     return count;
 }
+
+string [] newStringArray = string [count];
+
+void CreateNewArray(string [] oldArray, string [] newArray)
+{
+    for (int i = 0; i < oldArray.Length; i++)
+    {
+        if (oldArray[i].Length <= 3)
+        {
+            newArray[i] = oldArray[i];
+        }
+    }
+}
