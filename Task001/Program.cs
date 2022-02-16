@@ -25,3 +25,12 @@ void CreateNewArray(string [] oldArray, string [] newArray)
         }
     }
 }
+
+void PrintArray(string [] someArray)
+{
+    for (int i = 0; i < someArray.Length; i++)
+    {
+        Console.WriteLine($"[{someArray}]");
+    }
+}
+
