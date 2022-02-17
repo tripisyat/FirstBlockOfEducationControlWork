@@ -1,36 +1,38 @@
-﻿string [] stringArray = new string[] {"abcde", "abc", "ab","abcd","abc"};
+﻿string[] stringArray = new string[] { "abcde", "abc", "ab", "abcd", "abc" };
 
-int CountForNewArray(string[] ArrayForCounting)
+int lengthOfNewArray = 0;
+for (int i = 0; i < stringArray.Length; i++)
 {
-    int count = 0;
-    for (int i = 0; i < ArrayForCounting.Length; i++)
+    if (stringArray[i].Length <= 3)
     {
-        if (ArrayForCounting[i].Length <=3)
-        {
-            count++;
-        }
-    }
-    return count;
-}
-
-string [] newStringArray = string [count];
-
-void CreateNewArray(string [] oldArray, string [] newArray)
-{
-    for (int i = 0; i < oldArray.Length; i++)
-    {
-        if (oldArray[i].Length <= 3)
-        {
-            newArray[i] = oldArray[i];
-        }
+        lengthOfNewArray++;
     }
 }
 
-void PrintArray(string [] someArray)
+var newArray = new string[lengthOfNewArray];
+
+int count = 0;
+for (int i = 0; i < stringArray.Length; i++)
 {
-    for (int i = 0; i < someArray.Length; i++)
+    if (stringArray[i].Length <= 3)
     {
-        Console.WriteLine($"[{someArray}]");
+        count++;
+        newArray[count - 1] = stringArray[i];
     }
 }
+
+void PrintArray(string[] someArray)
+{
+    Console.Write("[");
+    for (int i = 0; i < someArray.Length - 1; i++)
+    {
+        Console.Write($"{someArray[i]}, ");
+    }
+    Console.Write(someArray[someArray.Length - 1]);
+    Console.Write("]");
+}
+
+PrintArray(stringArray);
+Console.Write("->");
+PrintArray(newArray);
 
