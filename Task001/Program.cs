@@ -1,4 +1,4 @@
-﻿string[] stringArray = new string[] { "abcde", "abc", "ab", "abcd", "abc" };
+﻿string[] stringArray = new string[] { "abcde", "abc", "ab", "abcd", "abc","5"};
 
 int lengthOfNewArray = 0;
 for (int i = 0; i < stringArray.Length; i++)
